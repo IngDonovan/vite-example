@@ -12,7 +12,7 @@ export default defineConfig(({command, mode}) => {
                 }
 	    }
     }
-  else {
+  <!-- else {
 			console.log("Mode production")
 			return {
 					build: {
@@ -26,5 +26,17 @@ export default defineConfig(({command, mode}) => {
 								}
 						}
 				}
-			}
+			} -->
+	else {
+        console.log("modo produccion")
+        return {
+            build:{
+               lib: {
+                entry: resolve(_dirname, 'lib', 'main.js'),
+                name: 'demo',
+                fileName: (format)=>`demo.${format}.js`
+               }
+            }
+        }
+    }
   })
