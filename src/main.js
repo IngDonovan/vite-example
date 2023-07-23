@@ -7,6 +7,32 @@ import classes from '../css/module/button.module.css'
 import imageStyles from '../css/module/image.module.css'
 import { user } from './dt.json'
 
+const modules = import.meta.glob('./modules/*.js')
+
+// con async await
+// for(const path in modules){
+//   async function fetchModule(){
+//     const module = await modules[path]();
+//     module.load();
+//   }
+//   fetchModule();
+// }
+
+
+// a los top-level await
+for (const path in modules) {
+  const module = await modules[path]()
+  module.load()
+}
+
+//ejemplo profe
+// console.log(modules)
+// for (const path in modules) {
+//   modules[path]().then((module) => {
+//     module.load()
+//   })
+// }
+
 document.querySelector('#app').innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
