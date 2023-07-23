@@ -4,6 +4,7 @@ import javascriptLogo from '../javascript.svg'
 import viteLogo from '../public/vite.svg'
 import { setupCounter } from './counter.js'
 import classes from '../css/module/button.module.css'
+import imageStyles from '../css/module/image.module.css'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -21,9 +22,12 @@ document.querySelector('#app').innerHTML = `
       Click on the Vite logo to learn more
     </p>
     <button id="btn" type="button">Click</button>
+    <img src="${viteLogo}" id="otro" alt="Vite logo" />
   </div>
 `
 
 setupCounter(document.querySelector('#counter'));
 
 document.getElementById('btn').className = classes.buto;
+document.getElementById('otro').className = imageStyles.imag;
+
