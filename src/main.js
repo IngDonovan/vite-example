@@ -6,6 +6,10 @@ import { setupCounter } from './counter.js'
 import classes from '../css/module/button.module.css'
 import imageStyles from '../css/module/image.module.css'
 import { user } from './dt.json'
+import suma from './ts/suma.ts'
+
+console.log(`suma 2+3 = ${suma(2, 3)}`);
+let total = suma(2, 3);
 
 const modules = import.meta.glob('./modules/*.js')
 
@@ -51,6 +55,7 @@ document.querySelector('#app').innerHTML = `
     <button id="btn" type="button">Click</button>
     <img src="${viteLogo}" id="otro" alt="Vite logo" />
     <pre>${JSON.stringify(user)}</pre>
+    <h2>Suma 2 + 3 = ${total}</h2>
   </div>
 `
 
