@@ -3,6 +3,7 @@ import '../sass/ejemplo.scss'
 import javascriptLogo from '../javascript.svg'
 import viteLogo from '../public/vite.svg'
 import { setupCounter } from './counter.js'
+import classes from '../css/module/button.module.css'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -19,7 +20,10 @@ document.querySelector('#app').innerHTML = `
     <p class="read-the-docs">
       Click on the Vite logo to learn more
     </p>
+    <button id="btn" type="button">Click</button>
   </div>
 `
 
-setupCounter(document.querySelector('#counter'))
+setupCounter(document.querySelector('#counter'));
+
+document.getElementById('btn').className = classes.buto;
