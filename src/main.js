@@ -5,6 +5,7 @@ import viteLogo from '../public/vite.svg'
 import { setupCounter } from './counter.js'
 import classes from '../css/module/button.module.css'
 import imageStyles from '../css/module/image.module.css'
+import { user } from './dt.json'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -23,6 +24,7 @@ document.querySelector('#app').innerHTML = `
     </p>
     <button id="btn" type="button">Click</button>
     <img src="${viteLogo}" id="otro" alt="Vite logo" />
+    <pre>${JSON.stringify(user)}</pre>
   </div>
 `
 
